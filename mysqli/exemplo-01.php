@@ -10,7 +10,7 @@ $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, desenha) VALUES(?,?)"
 $stmt->bind_param("ss", $login, $senha);//parametros, ex string. se fosse int, ii
 
 $login = "user";
-$senhha = "12345";
+$senha = "12345";
 
 $stmt->execute();
 
