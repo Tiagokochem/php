@@ -31,6 +31,26 @@ $sql = new Sql();
 
 //echo $usuario;
 
+/* 
+Criando um novo usuário:
+
+$aluno = new Usuario("aluno", "@alun0");
+
+$aluno->insert();
+
+echo $aluno; 
+*/
+
+$usuario = new Usuario();
+
+$usuario->loadById(8);
+$usuario->update("tiago", "123");
+
+echo $usuario;
+
+
+
+
 
 
 ?>

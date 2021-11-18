@@ -103,6 +103,26 @@ class Usuario{
         if(count($results)> 0 ){
             $this->setData($results[0]);
         }
+    
+    }
+
+    public function update($login, $password){
+
+    $this->setDeslogin($login);
+    $this>setDesenha($password);
+
+    $sql = new Sql;
+
+     $Sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, desenha = :PASSWORD, idusuario = :ID", array(
+         ':LOGIN'=>$this->getDeslogin();
+         ':PASSWORD'=>$this->getDesenha();
+         ':ID'=>$this->getID();
+     ));
+}
+    
+    public function __construct($login ="", $password = ""){
+        $this->setDeslogin($login);
+        $this->setDesenha($password);
     }
 
 public function __toString(){
