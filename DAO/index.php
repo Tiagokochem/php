@@ -41,13 +41,18 @@ $aluno->insert();
 echo $aluno; 
 */
 
-$usuario = new Usuario();
+//$usuario = new Usuario();
 
-$usuario->loadById(8);
-$usuario->update("tiago", "123");
+//$usuario->loadById(8);
+//$usuario->update("tiago", "123");
+
+//echo $usuario;
+
+//Deletando um usuário
+$usuario-> new Usuario();
+$usuario->delete(7);
 
 echo $usuario;
-
 
 
 
